@@ -247,7 +247,7 @@ then
 	
 	if [ "$extensionModelName" = "Caffe" ] && [ $useDLACoreEnable -eq 1 ]
 	then
-		for i in 1 2 4 8 16
+		for i in 1 2 4 8 16 32 64 128
 		do
 			$trtexec \
 			--avgRuns=$avgRunsVal \
@@ -289,7 +289,7 @@ then
 		
 	elif [ "$extensionModelName" = "Caffe" ] && [ $useDLACoreEnable -eq 0 ]
 	then
-		for i in 1 2 4 8 16
+		for i in 1 2 4 8 16 32 64 128
 		do
 			$trtexec \
 			--avgRuns=$avgRunsVal \
@@ -329,7 +329,7 @@ then
 		
 	elif [ "$extensionModelName" = "ONNX" ]
 	then
-		for i in 1 2 4 8 16
+		for i in 1 2 4 8 16 32 64 128
 		do
 			$trtexec \
 			--avgRuns=$avgRunsVal \
